@@ -1,0 +1,78 @@
+{
+	"events": [
+		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "res://music/Pokemon RubySapphireEmerald- Littleroot Town.mp3",
+			"volume": -20
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": ""
+		},
+		{
+			"character": "character-1628725269.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi, i am ur teacher"
+		},
+		{
+			"character": "character-1628725269.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I need you to kill those monsters"
+		},
+		{
+			"character": "character-1628725269.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "understood?"
+		},
+		{
+			"character": "character-1628725269.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "are you ready"
+		},
+		{
+			"choice": "yes",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "perfect."
+		},
+		{
+			"choice": "no",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1628725269.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "too bad."
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.5",
+		"file": "timeline-1628725292.json",
+		"name": "timeline1"
+	}
+}
