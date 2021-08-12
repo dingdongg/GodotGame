@@ -12,11 +12,11 @@ func _process(delta):
 	var direction = sign(Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"))
 
 #for flipping image
-	if direction <0:
+	if direction <0 && isAtk == false:
 		animated_sprite.flip_h = false
 		get_node("AttackArea").set_scale(Vector2(-1, 1))
 		
-	elif direction >0:
+	elif direction >0&& isAtk == false:
 		animated_sprite.flip_h=true
 		get_node("AttackArea").set_scale(Vector2(1, 1))
 #
@@ -41,11 +41,15 @@ func _process(delta):
 		animated_sprite.play ("light_bow")
 		isAtk = true
 		direction =0
+		
 	if Input.is_action_pressed("ability_3"):
 		animated_sprite.play ("atk1")
 		isAtk = true
+		
 		$AttackArea/CollisionShape2D.disabled = false
 		direction =0
+	
+		
 	velocity.x = move_toward (velocity.x, max_run *direction, run_accel *delta )
 	global_position.x += (velocity.x * delta)
 	

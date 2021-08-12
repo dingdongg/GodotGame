@@ -2,10 +2,8 @@ extends Area2D
 
 var dead = false
 var hit = false
-var hp = 5
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var hp = 4
+onready var deathNoise = $monsterdead
 
 
 
@@ -14,24 +12,30 @@ func _process(delta):
 	
 	 if dead == false && hit == false:
 	  $AnimatedSprite.play ("idle")
+	 
 	 elif dead == false && hit == true:
 	   $AnimatedSprite.play ("hit")
-	  
+	   $"monsterhurt".play()
 	 else:
-	  $AnimatedSprite.play ("dead")
-	 
-	   
 	  
+	 
+	  
+	  $AnimatedSprite.play ("dead")
+	  
+	
 
 func _on_eyemonster_area_entered(area):
 	if area.is_in_group ("Sword"):
 		hp -= 1
 		hit = true
 		
-		
+	
 		
 	if hp == 0:
+		
 		dead = true
+		deathNoise.play()
+		
 
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "hit":
@@ -39,5 +43,10 @@ func _on_AnimatedSprite_animation_finished():
 		
 	if $AnimatedSprite.animation == "dead":
 		
-		queue_free()
+	
+		
+		
+		call_deferred('free')
+		
+	
 
