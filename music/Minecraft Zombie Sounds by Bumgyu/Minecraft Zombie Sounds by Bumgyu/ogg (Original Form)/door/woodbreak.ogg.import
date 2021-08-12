@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/woodbreak.ogg-ea83afe8ec4f4ce8e6dc14d6b636d4d4.oggstr"
+
+[deps]
+
+source_file="res://music/Minecraft Zombie Sounds by Bumgyu/Minecraft Zombie Sounds by Bumgyu/ogg (Original Form)/door/woodbreak.ogg"
+dest_files=[ "res://.import/woodbreak.ogg-ea83afe8ec4f4ce8e6dc14d6b636d4d4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

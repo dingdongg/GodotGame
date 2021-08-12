@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wood1.mp3-5c9b16cd2007f4580a22bd1aea3e2735.mp3str"
+
+[deps]
+
+source_file="res://music/Minecraft Zombie Sounds by Bumgyu/Minecraft Zombie Sounds by Bumgyu/mp3/door/wood1.mp3"
+dest_files=[ "res://.import/wood1.mp3-5c9b16cd2007f4580a22bd1aea3e2735.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

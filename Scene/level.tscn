@@ -1,30 +1,48 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scene/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/mushroom.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/eyemonster.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/npc1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://music/Konoha peace ost.mp3" type="AudioStream" id=5]
 
 [node name="level" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 127.963, 398.164 )
+position = Vector2( -1132.43, 388.64 )
 scale = Vector2( 4, 4 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 
 [node name="mushroom" parent="." instance=ExtResource( 2 )]
-position = Vector2( 434.948, 428.598 )
-scale = Vector2( 4, 4 )
+position = Vector2( 2068.1, 434.591 )
+scale = Vector2( 4, 3 )
 
 [node name="mushroom2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 784.176, 425.423 )
-scale = Vector2( 4, 4 )
+position = Vector2( 1689.15, 422.426 )
+scale = Vector2( 4, 3 )
 
 [node name="mushroom3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 593.688, 431.773 )
-scale = Vector2( 4, 4 )
+position = Vector2( 2586.44, 422.783 )
+scale = Vector2( 4, 3 )
 
 [node name="eyemonster" parent="." instance=ExtResource( 3 )]
-position = Vector2( 307.956, 425.423 )
+position = Vector2( 673.689, 407.978 )
 scale = Vector2( 4, 4 )
+
+[node name="eyemonster2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 869.018, 404.543 )
+scale = Vector2( 4, 4 )
+
+[node name="eyemonster3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 509.424, 407.54 )
+scale = Vector2( 4, 4 )
+
+[node name="npc1" parent="." instance=ExtResource( 4 )]
+position = Vector2( -960.014, 141.039 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -25.0
+autoplay = true

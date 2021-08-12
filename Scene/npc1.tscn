@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Sprite/Martial Hero 2/Sprites/Idle.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/npc1.gd" type="Script" id=2]
+[ext_resource path="res://Sprite/npc_quest_active.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 71.7111
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 200, 200 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 200, 0, 200, 200 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 400, 0, 200, 200 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 600, 0, 200, 200 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 129.609, 119.412 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 40.6393, 30.6691 )
+
+[node name="npc1" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="circle" type="CollisionShape2D" parent="."]
+position = Vector2( 393.77, 213.407 )
+scale = Vector2( 4, 4 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 394.888, 292.495 )
+scale = Vector2( 4, 3 )
+frames = SubResource( 6 )
+animation = "idle"
+frame = 3
+playing = true
+
+[node name="left" type="Area2D" parent="."]
+position = Vector2( 587.329, 253.62 )
+scale = Vector2( 4, 4 )
+
+[node name="lefthitbox" type="CollisionShape2D" parent="left"]
+modulate = Color( 0.94902, 0.0470588, 0.576471, 1 )
+position = Vector2( -106.082, 3.41713 )
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 7 )
+
+[node name="right" type="Area2D" parent="."]
+
+[node name="righthitbox" type="CollisionShape2D" parent="right"]
+position = Vector2( 629.119, 271.33 )
+scale = Vector2( 4, 4 )
+shape = SubResource( 8 )
+
+[node name="QuestionMark" type="Sprite" parent="."]
+position = Vector2( 412.88, 140.43 )
+scale = Vector2( 0.70211, 0.859777 )
+texture = ExtResource( 3 )
+
+[connection signal="area_entered" from="." to="." method="_on_npc1_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_npc1_area_exited"]
+[connection signal="area_entered" from="left" to="." method="_on_left_area_entered"]
+[connection signal="area_exited" from="left" to="." method="_on_left_area_exited"]
+[connection signal="area_entered" from="right" to="." method="_on_right_area_entered"]
+[connection signal="area_exited" from="right" to="." method="_on_right_area_exited"]

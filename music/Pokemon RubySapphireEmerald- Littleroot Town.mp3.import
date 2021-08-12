@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pokemon RubySapphireEmerald- Littleroot Town.mp3-776bcb2990d9b67a52f93d14a840ed43.mp3str"
+
+[deps]
+
+source_file="res://music/Pokemon RubySapphireEmerald- Littleroot Town.mp3"
+dest_files=[ "res://.import/Pokemon RubySapphireEmerald- Littleroot Town.mp3-776bcb2990d9b67a52f93d14a840ed43.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

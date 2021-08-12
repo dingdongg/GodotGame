@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Konoha peace ost.mp3-41e70645a93db1733e0441f74d9f3303.mp3str"
+
+[deps]
+
+source_file="res://music/Konoha peace ost.mp3"
+dest_files=[ "res://.import/Konoha peace ost.mp3-41e70645a93db1733e0441f74d9f3303.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

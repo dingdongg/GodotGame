@@ -1,10 +1,13 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Sprite/Monsters_Creatures_Fantasy/Flying eye/Take Hit.png" type="Texture" id=1]
 [ext_resource path="res://Sprite/Monsters_Creatures_Fantasy/Flying eye/Flight.png" type="Texture" id=2]
 [ext_resource path="res://Sprite/Monsters_Creatures_Fantasy/Flying eye/Attack.png" type="Texture" id=3]
 [ext_resource path="res://Sprite/Monsters_Creatures_Fantasy/Flying eye/Death.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/eyemonster.gd" type="Script" id=5]
+[ext_resource path="res://music/Minecraft Zombie Sounds by Bumgyu/Minecraft Zombie Sounds by Bumgyu/mp3/zombie1.mp3" type="AudioStream" id=6]
+[ext_resource path="res://music/Minecraft Zombie Sounds by Bumgyu/Minecraft Zombie Sounds by Bumgyu/mp3/zombiehurt1.mp3" type="AudioStream" id=7]
+[ext_resource path="res://music/Minecraft Zombie Sounds by Bumgyu/Minecraft Zombie Sounds by Bumgyu/mp3/zombiedeath.mp3" type="AudioStream" id=8]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -163,6 +166,17 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -4.24265, 1.41422 )
 shape = SubResource( 26 )
+
+[node name="monstergrowl" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+max_distance = 500.0
+
+[node name="monsterhurt" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+
+[node name="monsterdead" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
 
 [connection signal="area_entered" from="." to="." method="_on_eyemonster_area_entered"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

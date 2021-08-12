@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/metal2.ogg-d937cb82b00fc0821fbff24f03c5627a.oggstr"
+
+[deps]
+
+source_file="res://music/Minecraft Zombie Sounds by Bumgyu/Minecraft Zombie Sounds by Bumgyu/ogg (Original Form)/door/metal2.ogg"
+dest_files=[ "res://.import/metal2.ogg-d937cb82b00fc0821fbff24f03c5627a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
