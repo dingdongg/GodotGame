@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Kanye West - Moon (Audio) Feat. Kid Cudi & Don Toliver.mp3-7edec3b79a05ced67043e1e15e86810f.mp3str"
+
+[deps]
+
+source_file="res://Sprite/test sound/Kanye West - Moon (Audio) Feat. Kid Cudi & Don Toliver.mp3"
+dest_files=[ "res://.import/Kanye West - Moon (Audio) Feat. Kid Cudi & Don Toliver.mp3-7edec3b79a05ced67043e1e15e86810f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
